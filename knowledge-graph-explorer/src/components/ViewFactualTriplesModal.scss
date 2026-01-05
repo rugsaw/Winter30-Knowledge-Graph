@@ -1,0 +1,31 @@
+.view-factual-triples-modal {
+  .factual-triples-display-container {
+    max-height: 60vh;
+    overflow: auto;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 1rem;
+    
+    .factual-triples-content {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #212529;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+
+  .download-icon {
+    margin-right: 0.5rem;
+  }
+
+  .copy-btn {
+    .copy-icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+

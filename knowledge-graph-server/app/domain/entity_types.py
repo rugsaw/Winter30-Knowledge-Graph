@@ -1,0 +1,11 @@
+ALLOWED_ENTITY_TYPES = [
+    "COMPANY",
+    "MARKET",
+    "PRODUCT",
+    "SEGMENT",
+    "SUBSIDIARY",
+    "BRAND",
+    "REGION",
+    "COUNTRY",
+    "DOCUMENT",
+]

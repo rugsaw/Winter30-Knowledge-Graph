@@ -1,0 +1,64 @@
+.allowed-types-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+
+  .schema-section {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .schema-section-title {
+      color: #28a745;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    .type-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+
+      .schema-badge {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+        font-weight: 500;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.allowed-types-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #28a745;
+  font-weight: 500;
+}
+
+// Custom scrollbar styling
+.allowed-types-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.allowed-types-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.allowed-types-container::-webkit-scrollbar-thumb {
+  background: #28a745;
+  border-radius: 4px;
+}
+
+.allowed-types-container::-webkit-scrollbar-thumb:hover {
+  background: #218838;
+}
+

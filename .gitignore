@@ -1,0 +1,24 @@
+.env
+.env.*
+notebooks/.venv
+/knowledge-graph-explorer/node_modules
+/knowledge-graph-explorer/.pnp
+/knowledge-graph-explorer/.pnp.js
+/knowledge-graph-explorer/build
+
+# testing
+/knowledge-graph-explorer/coverage
+
+# production
+/knowledge-graph-explorer/build
+
+# misc
+/knowledge-graph-explorer/.DS_Store
+/knowledge-graph-explorer/.env.local
+/knowledge-graph-explorer/.env.development.local
+/knowledge-graph-explorer/.env.test.local
+/knowledge-graph-explorer/.env.production.local
+
+/knowledge-graph-explorer/npm-debug.log*
+/knowledge-graph-explorer/yarn-debug.log*
+/knowledge-graph-explorer/yarn-error.log*

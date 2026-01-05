@@ -1,0 +1,382 @@
+// Green theme color variables
+$primary-green: #28a745;
+$primary-green-dark: #198754;
+$primary-green-light: #20c997;
+$green-hover: #218838;
+$green-focus: rgba(40, 167, 69, 0.25);
+
+.finscope-title {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  background-color: #ffffff;
+  height: 60px;
+}
+
+.finscope-logo {
+  height: 60px;
+  width: auto;
+}
+
+.home-page-container {
+  padding: 2rem;
+  padding-top: 5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page-content {
+  max-width: 800px;
+  width: 100%;
+
+  h1 {
+    color: $primary-green-dark;
+    font-weight: 600;
+  }
+}
+
+.knowledge-graph-textarea {
+  resize: vertical;
+  min-height: 150px;
+  border: 2px solid #e0e0e0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    border-color: $primary-green;
+    box-shadow: 0 0 0 0.2rem $green-focus;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.generate-button {
+  min-width: 200px;
+  background-color: $primary-green;
+  border-color: $primary-green;
+  font-weight: 500;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: $green-hover;
+    border-color: $green-hover;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+  }
+
+  &:active {
+    background-color: $primary-green-dark;
+    border-color: $primary-green-dark;
+    transform: translateY(0);
+  }
+
+  &:focus {
+    background-color: $primary-green;
+    border-color: $primary-green;
+    box-shadow: 0 0 0 0.2rem $green-focus;
+  }
+}
+
+// Form label styling with green accent
+.form-label {
+  color: $primary-green-dark;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.view-schema-link {
+  margin-left: 0.75rem;
+  color: $primary-green;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $primary-green-dark;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid $green-focus;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+// Toast container and animation styles
+.toast-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1055;
+  padding: 1rem;
+}
+
+.generation-toast {
+  min-width: 300px;
+  
+  // Initial state - hidden below screen
+  &:not(.show) {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+  // Animation when showing
+  &.showing {
+    animation: slideInUp 0.4s ease-out forwards;
+  }
+  
+  // Animation when hiding
+  &.hide {
+    animation: slideOutDown 0.4s ease-in forwards;
+  }
+  
+  // Final visible state
+  &.show:not(.showing):not(.hide) {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+// Graph visualization styles
+.graph-section {
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+
+  h2 {
+    color: $primary-green-dark;
+    font-weight: 600;
+  }
+
+  .graph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .fullscreen-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-color: $primary-green;
+    color: $primary-green;
+    font-weight: 500;
+
+    .fullscreen-icon {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background-color: $primary-green;
+      border-color: $primary-green;
+      color: white;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $green-focus;
+    }
+  }
+}
+
+.graph-container-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border: 1px solid lightgray;
+  background-color: #ffffff;
+  min-height: 600px;
+
+  &.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    border: none;
+    min-height: 100vh;
+  }
+
+  &:fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    border: none;
+    min-height: 100vh;
+  }
+}
+
+.graph-canvas {
+  flex: 1;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.graph-container-wrapper.fullscreen .graph-canvas,
+.graph-container-wrapper:fullscreen .graph-canvas {
+  height: 100vh;
+}
+
+.side-panel {
+  width: 320px;
+  border-left: 1px solid #ddd;
+  padding: 12px;
+  background: #fafafa;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+
+  .side-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+
+    h3 {
+      margin: 0;
+      color: $primary-green-dark;
+      font-size: 1.2rem;
+    }
+
+    .close-panel-btn {
+      padding: 0;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: #666;
+      text-decoration: none;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-green-dark;
+      }
+    }
+  }
+
+  .node-details {
+    flex: 1;
+
+    h4 {
+      color: $primary-green-dark;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+      color: #666;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 0.5rem;
+
+      td {
+        padding: 6px;
+        border-bottom: 1px solid #eee;
+
+        &.key {
+          font-weight: bold;
+          width: 40%;
+          color: $primary-green-dark;
+        }
+      }
+    }
+  }
+}
+
+.toggle-panel-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background-color: $primary-green;
+  border-color: $primary-green;
+
+  &:hover {
+    background-color: $green-hover;
+    border-color: $green-hover;
+  }
+}
+
+.download-json-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: $primary-green;
+  border-color: $primary-green;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  .download-icon {
+    font-size: 1.1rem;
+  }
+
+  &:hover {
+    background-color: $green-hover;
+    border-color: $green-hover;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $green-focus;
+  }
+}
+
+.action-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-top: 1rem;
+}

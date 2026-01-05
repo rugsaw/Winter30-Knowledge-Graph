@@ -1,0 +1,35 @@
+# Knowledge Graph Explorer - Project Rules
+
+## Theme & Styling
+- **Primary Theme Color: Green** - Always use green as the primary theme color for this project
+- When creating or modifying UI components, buttons, links, accents, or any visual elements, use green color schemes
+- Preferred green shades: Use modern green variants (e.g., #28a745, #20c997, #198754, or similar Bootstrap green variants)
+- For texts use black and white depeding on the contrast with adjacent/background elements
+- Maintain consistency with green theming across all components and pages
+
+
+## Technology Stack
+- React 19.2.3 with functional components and hooks
+- React Bootstrap for UI components
+- SCSS for styling (use .scss files, not .css)
+- React Router DOM for routing
+
+## Code Style Guidelines
+- Use functional components with hooks (useState, useEffect, etc.)
+- Follow React best practices and modern patterns
+- Use Bootstrap components from react-bootstrap library
+- Write SCSS in a modular way and use BEM style guides (component-specific SCSS files)
+- Maintain consistent naming conventions (camelCase for variables/functions, kebab-case for CSS classes)
+
+## Project Structure
+- Components should be placed in appropriate directories under `src/`
+- Pages go in `src/pages/`
+- Services/API calls go in `src/services/`
+- Styles go in component-specific SCSS files or `src/styles/`
+
+## General Instructions
+- Always maintain the green theme when suggesting or implementing UI changes
+- When adding new features, ensure they align with the green color scheme
+- Keep the code clean, readable, and well-commented
+- Follow existing patterns and conventions in the codebase
+- add jsdocs to functions to make them readable
