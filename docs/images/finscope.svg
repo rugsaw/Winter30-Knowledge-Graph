@@ -1,0 +1,50 @@
+<svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="120" fill="transparent"/>
+
+  <!-- Magnifying Glass -->
+  <circle cx="60" cy="60" r="36"
+          stroke="#0A2540"
+          stroke-width="4"
+          fill="none"/>
+
+  <line x1="86" y1="86" x2="108" y2="108"
+        stroke="#0A2540"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- Graph Edges -->
+  <line x1="60" y1="44" x2="44" y2="58" stroke="#21BA45" stroke-width="2.4"/>
+  <line x1="60" y1="44" x2="76" y2="56" stroke="#21BA45" stroke-width="2.4"/>
+  <line x1="44" y1="58" x2="52" y2="74" stroke="#21BA45" stroke-width="2.4"/>
+  <line x1="76" y1="56" x2="68" y2="74" stroke="#21BA45" stroke-width="2.4"/>
+  <line x1="52" y1="74" x2="68" y2="74" stroke="#21BA45" stroke-width="2.4"/>
+  <line x1="60" y1="44" x2="60" y2="60" stroke="#21BA45" stroke-width="2"/>
+  <line x1="60" y1="60" x2="52" y2="74" stroke="#21BA45" stroke-width="2"/>
+  <line x1="60" y1="60" x2="68" y2="74" stroke="#21BA45" stroke-width="2"/>
+
+  <!-- Graph Nodes -->
+  <circle cx="60" cy="44" r="5" fill="#21BA45"/>
+  <circle cx="44" cy="58" r="4.2" fill="#21BA45"/>
+  <circle cx="76" cy="56" r="4.2" fill="#21BA45"/>
+  <circle cx="52" cy="74" r="4.2" fill="#21BA45"/>
+  <circle cx="68" cy="74" r="4.2" fill="#21BA45"/>
+  <circle cx="60" cy="60" r="6" fill="#0A2540"/>
+
+  <!-- Brand Text (Moved Left) -->
+  <text x="125" y="68"
+        font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="44"
+        font-weight="600"
+        fill="#0A2540">
+    Fin<tspan fill="#21BA45">Scope</tspan>
+  </text>
+
+  <!-- Larger Tagline -->
+  <text x="127" y="94"
+        font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="18"
+        fill="#5A6B7B">
+    Knowledge Graph Explorer
+  </text>
+</svg>
+
